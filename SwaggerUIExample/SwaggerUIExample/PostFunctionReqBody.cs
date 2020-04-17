@@ -22,8 +22,7 @@ namespace SwaggerUIExample
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "PostFunctionReqBody")]
             [RequestBodyType(typeof(UserData), "PostFunctionReqBody request")]
             HttpRequest req,
-            [SwaggerIgnore]
-            ILogger log)
+            [SwaggerIgnore] ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
